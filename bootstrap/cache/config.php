@@ -242,12 +242,12 @@
     'port' => '587',
     'from' => 
     array (
-      'address' => 'trolyao2018@gmail.com',
+      'address' => 'duongkimyen4936@gmail.com',
       'name' => 'Duong Kim Yen',
     ),
     'encryption' => 'tls',
-    'username' => 'trolyao2018@gmail.com',
-    'password' => 'P@ssW0rd',
+    'username' => 'duongkimyen4936@gmail.com',
+    'password' => '9a!MQ@8v',
     'sendmail' => '/usr/sbin/sendmail -bs',
     'pretend' => false,
   ),
