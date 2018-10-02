@@ -157,7 +157,7 @@
        <ul class="nav navbar-nav" id="side-menu">       
                        
                      
-                        <li class="@yield ('trangchu_active')">
+                        <li class="@yield ('trangchu_active')" style="display: none">
                             <a   href="{!! route ('home')!!}"><i class="glyphicon glyphicon-home"></i> Trang chủ gói thầu <span class="fa arrow"></span></a>
                           </li>
 
@@ -168,13 +168,13 @@
                                 <li  class="@yield ('thongtin_active')" >
                                     <a  href="{!! route ('profile')!!}"><i class="  glyphicon glyphicon-user"></i> Thông tin tài khoản   </a>
                                 </li>
-                                <li  class="@yield ('keyword_active')" >
+                                <li  class="@yield ('keyword_active')"  style="display:none">
                                     <a href="{!! route ('keyword')!!}"> <i class="glyphicon glyphicon-th-list"></i> Danh sách từ khóa gói thầu</a>
                                 </li>
                                  <li  class="@yield ('keyword2_active')" >
                                     <a href="{!! route ('keywordvanban')!!}"> <i class="glyphicon glyphicon-th-list"></i> Danh sách từ khóa văn bản</a>
                                 </li>
-                                 <li   class="@yield ('find_active')" >
+                                 <li   class="@yield ('find_active')" style="display:none">
                                     <a  href="{!! route ('find_package')!!}"> <i class="glyphicon glyphicon-search"></i> Tìm gói thầu</a>
                                 </li>
                                  <li   class="@yield ('find1_active')" >

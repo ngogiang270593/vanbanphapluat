@@ -18,7 +18,7 @@ Tìm Văn Bản Pháp Luật
     include(config_path().'\connect.php');
 ?>
      <span style="text-align:center"><h2> Danh sách văn bản pháp luật </h2></span>
-                      <span style="font-size: 150%;"> Danh sách gói thầu tìm thấy với từ khóa là: 
+                      <span style="font-size: 150%;"> Danh sách văn bản tìm thấy với từ khóa là: 
                        </span> <?php $truyvan_tukhoa = "Select * from keywords2 where user_id = '$user_id' ";
                 $res = mysqli_query($conn,$truyvan_tukhoa);  
                 if (isset($res))  {

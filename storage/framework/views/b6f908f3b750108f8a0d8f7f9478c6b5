@@ -157,7 +157,7 @@
        <ul class="nav navbar-nav" id="side-menu">       
                        
                      
-                        <li class="<?php echo $__env->yieldContent('trangchu_active'); ?>">
+                        <li class="<?php echo $__env->yieldContent('trangchu_active'); ?>" style="display: none">
                             <a   href="<?php echo route ('home'); ?>"><i class="glyphicon glyphicon-home"></i> Trang chủ gói thầu <span class="fa arrow"></span></a>
                           </li>
 
@@ -168,13 +168,13 @@
                                 <li  class="<?php echo $__env->yieldContent('thongtin_active'); ?>" >
                                     <a  href="<?php echo route ('profile'); ?>"><i class="  glyphicon glyphicon-user"></i> Thông tin tài khoản   </a>
                                 </li>
-                                <li  class="<?php echo $__env->yieldContent('keyword_active'); ?>" >
+                                <li  class="<?php echo $__env->yieldContent('keyword_active'); ?>"  style="display:none">
                                     <a href="<?php echo route ('keyword'); ?>"> <i class="glyphicon glyphicon-th-list"></i> Danh sách từ khóa gói thầu</a>
                                 </li>
                                  <li  class="<?php echo $__env->yieldContent('keyword2_active'); ?>" >
                                     <a href="<?php echo route ('keywordvanban'); ?>"> <i class="glyphicon glyphicon-th-list"></i> Danh sách từ khóa văn bản</a>
                                 </li>
-                                 <li   class="<?php echo $__env->yieldContent('find_active'); ?>" >
+                                 <li   class="<?php echo $__env->yieldContent('find_active'); ?>" style="display:none">
                                     <a  href="<?php echo route ('find_package'); ?>"> <i class="glyphicon glyphicon-search"></i> Tìm gói thầu</a>
                                 </li>
                                  <li   class="<?php echo $__env->yieldContent('find1_active'); ?>" >

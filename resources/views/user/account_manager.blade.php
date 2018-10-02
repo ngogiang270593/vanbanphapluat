@@ -50,7 +50,7 @@ Thông Tin Tài Khoản
        
       </tr>
       <tr>
-      <td>Nhận thông tin cập nhật gói thầu qua email hằng ngày: 
+      <td>Nhận thông tin cập nhật văn bản mới qua email hằng ngày: 
           @if ($value->receive_email==1)
                    <strong> Có </strong>
                 @else 
