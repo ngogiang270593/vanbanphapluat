@@ -1,0 +1,24 @@
+#tooltip li{
+    display:inline;
+}
+ 
+#tooltip a{
+    float:left;
+    position:Relative;
+    margin-left:10px;
+    margin-right:10px;
+}
+ #tooltip a span{
+    position:Absolute;
+    top:-25px;
+    left:-100%;
+    white-space:nowrap;
+    font-size:12px;
+    font-family:arial,sans-serif;
+    padding:6px 17px;
+    border-radius:3px;
+    color:white;
+    background-color:#101010;
+    text-shadow:0 1px 0 rgba(0,0,0,0.7);
+    box-shadow:0 1px 1px  rgba(0,0,0,1);
+}

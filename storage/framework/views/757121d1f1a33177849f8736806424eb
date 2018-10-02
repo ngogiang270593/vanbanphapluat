@@ -1,0 +1,35 @@
+<p> &nbsp; &nbsp; Xin chào bạn <strong><?php echo e($name); ?></strong>!</p></br>
+
+<p>  &nbsp; &nbsp; Đây là danh sách gói thầu mới nhất theo chủ đề của bạn với từ khóa là: 
+<?php foreach($keyword as $key => $values): ?>
+        <strong style="overflow: hidden;"><span><?php echo e($values->keyword); ?></span></strong>
+       <?php if($key < (count($keyword)-1)): ?> <label style="margin-left: -5px; ">,</label>
+       <?php else: ?> <label style="margin-left: -3px; ">.</label>
+       <?php endif; ?>
+ <?php endforeach; ?>
+</p> </br> </br>
+<table border="1">
+
+<tr> <th align="center"> Stt </th> <th>Tên gói thầu</th><th>Bên mời thầu</th> </tr>
+<?php $i = 1; ?>
+	<?php foreach($noidung as $value): ?>
+	
+		
+		<tr>
+		<td> <?php echo e($i); ?></td>
+				
+		<td>
+			<a style="text-decoration: none;" href="<?php echo $value->link; ?>"> <?php echo $value->title; ?></a>
+		</td>
+		<td>
+			<span><?php echo $value->bidder; ?></span>
+		</td>
+		
+		
+		</tr>
+		<?php $i++;?>
+
+	
+	<?php endforeach; ?>
+	
+</table>

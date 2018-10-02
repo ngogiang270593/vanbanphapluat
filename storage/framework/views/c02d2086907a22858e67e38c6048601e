@@ -1,0 +1,210 @@
+<?php $__env->startSection('keyword2_active'); ?>
+active
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('active'); ?>
+Danh Sách Từ khóa
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+
+ <script src="<?php echo e(asset('public/libs/datatables.min.js')); ?>"></script>
+    <link href="<?php echo e(asset('public/libs/datatables.min.css')); ?>" rel="stylesheet">
+ 
+<meta name="_token" content="<?php echo e(csrf_token()); ?>">
+
+   <?php  $data = DB::table('keywords2')->where('user_id',Auth::user()->id)->get();       ?>
+
+<div  class="col-sm-12">
+<div style="text-align: center; margin-top: 50px;">
+     <h2 >Danh Sách Từ Khóa Đã Thêm Vào</h2>    
+</div>
+      <div id="table_bm"> 
+               <table class= 'table table-bordered table-striped' id='lst'>
+                  <thead>
+                  <tr>
+                  <td colspan="9">
+                    
+                      <!--<input type="submit" class="btn btn-danger" name="btn_delete" id="btn_delete" value="Xóa" style="float: right;margin-left: 10px">-->
+                      <form>
+                      <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
+                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modaltukhoa" data-backdrop="static" style="float: right;margin-left: 10px" name="Add" id="modelAddvanban">Thêm Từ Khóa</button>
+                      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modaltukhoa" data-backdrop="static" style="float: right;margin-left: 10px" name="Delete" id="Delete1">Xóa Từ Khóa</button>
+
+
+                      </form>
+                      
+                  </td>
+                  </tr>
+                  <tr>
+                    <th width="30"></th>
+                    <th width="50">STT</th>
+                    <th>Từ Khóa</th>
+                    <th></th>
+                  </tr>
+                  </thead> 
+                  <?php $i = 1; ?>
+                    <?php foreach($data as $value): ?>
+                    <tr id="">
+                    <td style="text-align: center;"><input type="checkbox" name="id[]" class="checkbox" value="<?php echo $value->id; ?>"></td>
+                    <td style="font-size: 150%;" style="text-align-last: center; "><?php echo $i++; ?></td>                    
+                              <td style="font-size: 150%;"><?php echo $value->keyword; ?></td>
+                              <td>
+                                  <button class="btn btn-primary btn-xs edit_bm glyphicon glyphicon-pencil tukhoa"  data-toggle="modal" data-target="#modal_edit_keywork" value="<?php echo $value->id; ?>"></button>
+                                  
+                                  <button type="button" name="Del_BM" id="" class="btn btn-xs btn-danger Del_BM glyphicon glyphicon glyphicon-trash"></button>
+                              </td>
+                          </tr>
+                    
+                    <?php endforeach; ?>
+
+              </table>
+
+<!-- Model Cập Nhật thông tin -->
+<!-- Modal -->
+<!-- Button trigger modal -->
+
+
+
+<!-- Modal -->
+<!-- Trigger the modal with a button -->
+ 
+
+  <!-- Modal thêm-->
+  <div class="modal fade" id="myModalvanban" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Thêm Từ Khóa</h4>
+        </div>
+        <div class="modal-body">
+      <div class="form-group">
+  <label for="usr">Từ Khóa:</label>
+  <input type="text" class="form-control" id="keyword">
+</div>
+        </div>
+        <div class="modal-footer">
+                  <button type="button" class="btn btn-success" data-dismiss="modal" id='Addvanban'>Thêm</button>
+          <button type="button" class="btn btn-success" data-dismiss="modal">Đóng</button>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <!-- Modal Edit Từ Khóa-->
+  <div class="modal fade" id="modelEdit" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Thay Đổi Từ Khóa</h4>
+        </div>
+        <div class="modal-body">
+      <div class="form-group">
+  <label for="usr">Từ Khóa:</label>
+  <input type="text" class="form-control" id="keyword_edit" value="dsvd">
+</div>
+        </div>
+        <div class="modal-footer">
+                  <button type="button" class="btn btn-success" data-dismiss="modal" id='Addvanban'>Thêm</button>
+          <button type="button" class="btn btn-success" data-dismiss="modal">Đóng</button>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+ 
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+
+   
+    //Xóa từ khóa
+    $("#Delete1").click(function(){
+      var r = confirm("Bạn có muốn xóa từ khóa?");
+        if (r == true) {
+         var id = [];  
+       $(':checkbox:checked').each(function(i){  
+         id[i] = $(this).val();  
+        });  
+
+         $.ajax({                   
+          type : 'get',          
+          url : 'deletekey1', //Here you will fetch records 
+          data : {id:id},         
+          success : function(data){
+          
+            $('#result').html(data);//Show fetched data from database
+          }
+        });
+           location.reload();
+       } else {
+        txt = "You pressed Cancel!";
+       }
+      
+        
+
+
+    })
+
+ // Chỉnh Sửa Từ Khóa 
+ $(".tukhoa").click(function(){
+   // $('#modelEdit').modal('show');
+     var id = $(this).val(); 
+          
+     alert(id);
+ });
+
+  // Thêm từ khóa
+     $("#modelAddvanban").click(function(){
+           $('#myModalvanban').modal('show');
+     });
+  
+
+    
+     $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+            }
+        });
+
+
+     $("#Addvanban").click(function(){
+
+     
+          var data = {
+              user_id : <?php echo Auth::user()->id?>,
+              keyword     : $("#keyword").val(),               
+              _token : $('meta[name="_token"]').attr('content'),            
+        };
+          $.ajax({                   
+          type : 'get',          
+          url : 'addkeyvanban', //Here you will fetch records 
+          data : data,         
+          success : function(data){
+            $('#result').html(data);//Show fetched data from database
+          }
+        });
+            location.reload();
+         
+     });
+  });
+</script>
+
+
+</div>
+</div>
+<?php $__env->stopSection(); ?>
+
+  
+<?php echo $__env->make('user_master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,32 @@
+#form_dang_nhap{
+    font: 95% Arial, Helvetica, sans-serif;
+    max-width: 500px;
+    margin: 10px auto;
+    border: 10px solid #42b3f4;
+    border-radius: 10px;
+}
+.ID_DN {
+    background-image: url('http://localhost/final/images/user.png');
+    background-repeat: no-repeat;
+    background-position: absolute;
+    position: relative ;
+    padding-left: 40px;
+}
+.pwd {
+    background-image: url('http://localhost/final/images/key.png');
+    background-repeat: no-repeat;
+    background-position: absolute;
+    position: relative ;
+    padding-left: 40px;
+}
+.footer{
+    position: relative;
+    border-top: 1px dashed black;
+    padding-top: 9px;
+}
+
+
+#image_banner{
+    width: 100%;
+    height:auto;
+}
