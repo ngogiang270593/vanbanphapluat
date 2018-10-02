@@ -308,8 +308,11 @@ Danh Sách Tài Khoản
             $('#result').html(data);//Show fetched data from database
           }
         });
-            location.reload();
+        setTimeout(function()
+        {
+           location.reload();
 
+        }, 200);
      });
 
 
@@ -407,6 +410,11 @@ Danh Sách Tài Khoản
             $('#result').html(data);//Show fetched data from database
           }
         });
+     	setTimeout(function()
+ 	        {
+ 	           location.reload();
+
+ 	        }, 200);
       } else {
         txt = "You pressed Cancel!";
        }
@@ -458,6 +466,11 @@ Danh Sách Tài Khoản
             $('#result').html(data);//Show fetched data from database
           }
         });
+          setTimeout(function()
+ 	        {
+ 	           location.reload();
+
+ 	        }, 200); 
 
 
 

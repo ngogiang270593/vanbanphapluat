@@ -54,7 +54,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => 'duongkimyen4936@gmail.com', 'name' => 'Duong Kim Yen'],
+	'from' => ['address' => 'trolyao2018@gmail.com', 'name' => 'Trợ Lý Ảo'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return [
 	|
 	*/
 
-	'username' => 'duongkimyen4936@gmail.com',
+	'username' => 'trolyao2018@gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return [
 	|
 	*/
 
-	'password' => '9a!MQ@8v',
+	'password' => 'P@ssW0rd',
 
 	/*
 	|--------------------------------------------------------------------------

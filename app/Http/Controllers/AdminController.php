@@ -196,7 +196,7 @@ echo "                             <input type='hidden' name='_token' value='";
                                 </label>
                             </div>";
                              echo "<div class='form-group'>
-                                <label style='margin-top: -5px; '  >Nhận thông tin gói thầu mới qua email</label>
+                                <label style='margin-top: -5px; '  >Nhận thông tin văn bản mới qua email</label>
                                 <input style='margin-left:5px; margin-top:10px; ' type='checkbox'   name='cbEmail' class = 'cbEmail' ";
 
                                     if ($data['receive_email']==1) 
