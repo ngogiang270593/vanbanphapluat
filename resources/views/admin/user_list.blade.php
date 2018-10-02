@@ -305,6 +305,7 @@ Danh Sách Tài Khoản
           url : 'add_account', //Here you will fetch records
           data : data,
           success : function(data){
+        	  window.location.reload();
             $('#result').html(data);//Show fetched data from database
           }
         });
@@ -335,6 +336,7 @@ Danh Sách Tài Khoản
           url : 'model_keyword', //Here you will fetch records
           data : data,
           success : function(data){
+        	  window.location.reload();
             $('#result').html(data);//Show fetched data from database
           }
         });
@@ -407,6 +409,7 @@ Danh Sách Tài Khoản
           url : 'user_delete', //Here you will fetch records
           data : data,
           success : function(data){
+        	  window.location.reload();
             $('#result').html(data);//Show fetched data from database
           }
         });
@@ -463,6 +466,7 @@ Danh Sách Tài Khoản
           url : 'edit-user', //Here you will fetch records
           data : data,
           success : function(data){
+        	  window.location.reload();
             $('#result').html(data);//Show fetched data from database
           }
         });

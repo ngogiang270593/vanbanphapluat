@@ -304,11 +304,15 @@ Danh Sách Tài Khoản
           url : 'add_account', //Here you will fetch records
           data : data,
           success : function(data){
+        	  window.location.reload();
             $('#result').html(data);//Show fetched data from database
           }
         });
-            location.reload();
+        setTimeout(function()
+        {
+           location.reload();
 
+        }, 200);
      });
 
 
@@ -331,6 +335,7 @@ Danh Sách Tài Khoản
           url : 'model_keyword', //Here you will fetch records
           data : data,
           success : function(data){
+        	  window.location.reload();
             $('#result').html(data);//Show fetched data from database
           }
         });
@@ -403,9 +408,15 @@ Danh Sách Tài Khoản
           url : 'user_delete', //Here you will fetch records
           data : data,
           success : function(data){
+        	  window.location.reload();
             $('#result').html(data);//Show fetched data from database
           }
         });
+     	setTimeout(function()
+ 	        {
+ 	           location.reload();
+
+ 	        }, 200);
       } else {
         txt = "You pressed Cancel!";
        }
@@ -454,9 +465,15 @@ Danh Sách Tài Khoản
           url : 'edit-user', //Here you will fetch records
           data : data,
           success : function(data){
+        	  window.location.reload();
             $('#result').html(data);//Show fetched data from database
           }
         });
+          setTimeout(function()
+ 	        {
+ 	           location.reload();
+
+ 	        }, 200); 
 
 
 
