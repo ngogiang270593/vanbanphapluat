@@ -89,7 +89,7 @@ class AuthController extends Controller {
 		$admin  = array('email' =>$request->email ,'password'=> $request->password, 'level'=> 2,'status' => 1 );
 		  if ($this->auth->attempt($user))
 		  {		  
-		  	return redirect ('user/home');
+		  	return redirect ('user/homevanban');
 			}
 			else if ($this->auth->attempt($admin))
 				return redirect ('admin/list-package-vanban');
