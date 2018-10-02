@@ -129,8 +129,8 @@
         
         ?>    
         @if (count($src)== 1 )      
-         <div style="margin-left: 15px; margin-top: 20px; width: 80px; height: 80px;"> <a  target="_blank" href="/<?php foreach ($src as  $value) {
-           echo $value->src;}?>"> <img  src="/<?php foreach ($src as  $value) {
+         <div style="margin-left: 15px; margin-top: 20px; width: 80px; height: 80px;"> <a  target="_blank" href="{!! url()!!}/<?php foreach ($src as  $value) {
+           echo $value->src;}?>"> <img  src="{!! url()!!}/<?php foreach ($src as  $value) {
            echo $value->src;   }?>" class="img-circle" alt="User Image" width="60px" height="60px   ">
           </a> </div>
         </div>
