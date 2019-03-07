@@ -1,7 +1,7 @@
 <?php
    $host = "localhost";
             $username = "root";
-            $pass = "";
+            $pass = "11111";
             $db = "vanbanphapluat";
             $conn = mysqli_connect ($host,$username,$pass,$db);
             mysqli_query($conn,"SET character_set_results=utf8");
